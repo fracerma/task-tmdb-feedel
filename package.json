@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "startDev": "nodemon index.js"
+    "startDev": "nodemon index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,15 @@
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.6"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^26.6.2",
+    "supertest": "^6.0.0"
   }
 }
