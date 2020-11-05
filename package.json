@@ -19,8 +19,12 @@
   },
   "homepage": "https://github.com/fracerma/task-tmdb-feedel#readme",
   "dependencies": {
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
+    "bootstrap-vue": "^2.18.1",
     "express": "^4.17.1",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "vue-router": "^3.4.8"
   },
   "jest": {
     "testEnvironment": "node",
