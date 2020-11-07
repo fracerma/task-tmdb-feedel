@@ -1,0 +1,14 @@
+//Generes movie list
+GET http://localhost:4000/api/genre/movie
+
+###
+//Movie Details
+GET http://localhost:4000/api/movie/2000
+
+###
+//Movie Discover
+GET http://localhost:4000/api/discover/movie?sort_by=popularity.desc
+
+###
+//Movie Search
+GET http://localhost:4000/api/search/movie?query=007
