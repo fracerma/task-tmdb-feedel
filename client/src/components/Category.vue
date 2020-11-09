@@ -30,10 +30,9 @@ export default {
             data.forEach(el=>{
                 fetchServer(endpoints.vote_avg+"&with_genres="+el.id,(data)=>{
                     const results=data.results;
-                    console.log(results);
                     do{
                         const random=Math.floor(Math.random() * results.length-1);
-                        el.poster_path=results[random];
+                        el.poster_path=results[random].poster_path;
                     } while(el.poster_path==null);
                     this.genres.push(el);
                 })
@@ -57,6 +56,7 @@ export default {
         margin: 10px;
         border-radius: 10px;
         box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+        width: 210px;
         
     }
     .cat-card:hover{
@@ -66,6 +66,6 @@ export default {
     img{
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-        width:200px;
+        width:208px;
     }
 </style>
