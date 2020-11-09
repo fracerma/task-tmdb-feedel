@@ -1,6 +1,6 @@
 <template>
     <div class="card movie_card" @click="openMovie">
-        <img :src="'https://image.tmdb.org/t/p/original/'+movie.poster_path" class="card-img-top" alt="...">
+        <img v-if="movie.poster_path" :src="'https://image.tmdb.org/t/p/original/'+movie.poster_path" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{movie.title}}</h5>
             <div v-if="false" class="credits">

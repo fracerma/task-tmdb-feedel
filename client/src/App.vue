@@ -2,7 +2,7 @@
   <div id="app">
     <nav-bar>
     </nav-bar>
-    <img class="bg-img" src="../public/background.png" alt="">
+    <img class="bg-img" :src="bg_img">
     <router-view>
     </router-view>
   </div>
@@ -16,7 +16,12 @@ export default {
   name: 'App',
   components: {
     NavBar
-  }
+  },
+  data() {
+    return {
+      bg_img: "https://pbs.twimg.com/media/CSSrfrxWIAE7OSQ.png:large"
+    }
+  },
 }
 </script>
 
@@ -38,7 +43,7 @@ export default {
     top: 0;
     min-height: 100%;
     min-width: 100%;
-    opacity: 60%;
+    opacity: 0.6;
     z-index: -1;
   }
 </style>

@@ -28,7 +28,6 @@ const routes = [
   {path:"/movie/:id",component:MovieDetails}
 ]
 const router = new VueRouter({
-  mode: 'history',
   routes 
 });
 

@@ -1,7 +1,7 @@
 <template>
-  <div class="preview">
+  <div v-if="movie" class="preview">
       <div class="left">
-          <img :src="'https://image.tmdb.org/t/p/original/'+movie.poster_path" alt="" srcset="">
+          <img v-if="movie.poster_path" :src="'https://image.tmdb.org/t/p/original/'+movie.poster_path" alt="" srcset="">
       </div>
       <div class="right">
             <h1>
