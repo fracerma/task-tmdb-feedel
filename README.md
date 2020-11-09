@@ -10,7 +10,7 @@ In order to query the server is needed to have a granted api key for The Movie D
 It can be placed in a .env file in a line like TMDB_API_KEY=<<api_key>>
 
 
-### 3- Start server
+## 3- Start server
 ```
 npm run start
 ```
