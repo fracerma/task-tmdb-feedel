@@ -30,6 +30,7 @@ export default {
             data.forEach(el=>{
                 fetchServer(endpoints.vote_avg+"&with_genres="+el.id,(data)=>{
                     const results=data.results;
+                    console.log(results);
                     do{
                         const random=Math.floor(Math.random() * results.length-1);
                         el.poster_path=results[random];
