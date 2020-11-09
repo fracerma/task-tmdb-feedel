@@ -78,10 +78,6 @@ app.get("/api/movie/:id",(req,res,next)=>{
 
 app.use(express.static('./client/dist'));
 
-app.use("*",(req,res)=>{
-    res.redirect("/");
-})
-
 app.listen(PORT,()=>{
     console.log(`Server is listening on http://localhost:${PORT}`);
 })
