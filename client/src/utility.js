@@ -33,7 +33,6 @@ function getDocHeight() {
 
 export function listenerBottom(endpoint,callback) {
   if(window.scrollY+window.innerHeight===getDocHeight()) {
-    console.log(endpoint);
     fetchServer(endpoint,callback);
   }
 }
