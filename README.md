@@ -1,4 +1,3 @@
-# task-tmdb-feedel
 ## Getting Started
 ### 1- Project setup
 ```
