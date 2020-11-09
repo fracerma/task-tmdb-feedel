@@ -11,13 +11,15 @@ export function fetchServer(endpoint,callback){
   );
 }
 
+const base_url="http://localhost:4000/api"
+
 export const endpoints={
-  popular: "http://localhost:4000/api/discover/movie?sort_by=popularity.desc",
-  vote_avg: "http://localhost:4000/api/discover/movie?sort_by=vote_count.desc",
-  new: `http://localhost:4000/api/discover/movie?sort_by=primary_release_date.desc&year=${(new Date()).getFullYear()}`,
-  genres: 'http://localhost:4000/api/genre/movie',
-  movie_details: (id)=>{return 'http://localhost:4000/api/movie/'+id},
-  search: (query)=>{return 'http://localhost:4000/api/search/movie?query='+query}
+  popular: base_url+"/discover/movie?sort_by=popularity.desc",
+  vote_avg: base_url+"/discover/movie?sort_by=vote_count.desc",
+  new: base_url+`/discover/movie?sort_by=primary_release_date.desc&year=${(new Date()).getFullYear()}`,
+  genres: base_url+'/genre/movie',
+  movie_details: (id)=>{return base_url+'/movie/'+id},
+  search: (query)=>{return base_url+'/search/movie?query='+query}
 }
 
 function getDocHeight() {
