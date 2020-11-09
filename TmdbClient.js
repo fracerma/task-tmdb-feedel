@@ -1,7 +1,7 @@
 const inspector = require("schema-inspector");
 const buildUrl=require("build-url");
 var request = require('request');
-const schemas=require("./req_schema");
+const schemas=require("./QuerySchemas");
 
 let me;
 
@@ -59,6 +59,7 @@ tmdb.prototype.genre={
                         queryPerform(options,endpoint,callback);
         }
 }
+
 tmdb.prototype.search={
         movie: function(options,callback){
                 const schema=schemas.search_movie;
@@ -79,6 +80,7 @@ tmdb.prototype.search={
                         queryPerform(options,endpoint,callback);
         }
 }
+
 tmdb.prototype.discover={
         movie: function(options,callback){
                 if(arguments.length==1){
@@ -91,8 +93,8 @@ tmdb.prototype.discover={
                         queryPerform(options,endpoint,callback);
         }
 }
+
 function schemaValidation(schema,callback,options){
-        // Schema validation
         inspector.sanitize(schema, options);
         const res=inspector.validate(schema,options);
         if(!res.valid){

@@ -21,22 +21,24 @@ export default {
 </script>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
   body{
     margin: 0;
     padding:0
   }
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     
   }
   .bg-img{
-        position: fixed;
-        height: 100%;
-        opacity: 60%;
-        z-index: -1;
-        top: 0;
-        left: 0;
-    }
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 60%;
+    z-index: -1;
+  }
 </style>

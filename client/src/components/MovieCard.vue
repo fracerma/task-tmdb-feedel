@@ -1,5 +1,5 @@
 <template>
-    <div class="card movie_card">
+    <div class="card movie_card" @click="openMovie">
         <img :src="'https://image.tmdb.org/t/p/original/'+movie.poster_path" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{movie.title}}</h5>
@@ -22,6 +22,11 @@ export default {
         return {
         }
     },
+    methods: {
+        openMovie(){
+            this.$router.push('/movie/'+this.movie.id);
+        }
+    },
 }
 </script>
 
@@ -36,6 +41,10 @@ export default {
         margin: 20px;
         border-radius: 10px;
         box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+    }
+    .movie_card:hover{
+        cursor: pointer;
+        box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.75);
     }
     .movie_card img{
         border-top-left-radius: 10px;

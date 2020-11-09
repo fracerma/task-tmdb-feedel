@@ -5,8 +5,10 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import App from './App.vue'
 import New from './components/New.vue'
 import Category from './components/Category.vue'
+import CategoryMovies from './components/CategoryMovies.vue'
 import Popular from './components/Popular.vue'
 import Search from './components/Search.vue'
+import MovieDetails from "./components/MovieDetails.vue"
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -20,8 +22,10 @@ const routes = [
   {path:'/', redirect: '/popular'}, //skipping the homepage
   {path:"/new",component:New},
   {path:"/category",component:Category},
+  {path:"/category/:id",component:CategoryMovies},
   {path:"/popular",component:Popular},
-  {path:"/Search",component:Search},
+  {path:"/search",component:Search},
+  {path:"/movie/:id",component:MovieDetails}
 ]
 const router = new VueRouter({
   mode: 'history',
