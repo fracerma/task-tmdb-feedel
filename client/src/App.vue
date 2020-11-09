@@ -2,7 +2,7 @@
   <div id="app">
     <nav-bar>
     </nav-bar>
-    <img class="bg-img" src="https://pbs.twimg.com/media/CSSrfrxWIAE7OSQ.png:large" alt="">
+    <img class="bg-img" src="../public/background.png" alt="">
     <router-view>
     </router-view>
   </div>
