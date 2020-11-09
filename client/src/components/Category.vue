@@ -30,13 +30,11 @@ export default {
             data.forEach(el=>{
                 fetchServer(endpoints.vote_avg+"&with_genres="+el.id,(data)=>{
                     const results=data.results;
-                    for(const it in results){
-                        if(results[it].poster_path){
-                            el.poster_path=results[it].poster_path;
-                            this.genres.push(el);
-                            break;
-                        }
-                    }
+                    do{
+                        const random=Math.floor(Math.random() * results.length-1);
+                        el.poster_path=results[random];
+                    } while(el.poster_path==null);
+                    this.genres.push(el);
                 })
             })
         },
