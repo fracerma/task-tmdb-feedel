@@ -1,3 +1,7 @@
+# Online version
+https://tmdb-task-feedel.herokuapp.com/
+
+# Local version
 ## Getting Started
 ### 1- Project setup
 ```
