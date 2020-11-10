@@ -4,7 +4,7 @@ const TmdbClient = require("./TmdbClient");
 require("dotenv").config()
 
 const app = express();
-const PORT = process.env.PORT|4000;
+const PORT = process.env.PORT||4000;
 
 const tmdb= TmdbClient.init(process.env.TMDB_API_KEY);
 
