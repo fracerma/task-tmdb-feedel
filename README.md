@@ -1,5 +1,7 @@
 # Online version
-https://tmdb-task-feedel.herokuapp.com/
+https://tmdb-task-feedel.herokuapp.com/         (Basic Web App)
+
+https://tmdb-task-feedel.herokuapp.com/api      (API Base URL) 
 
 # Local version
 ## Getting Started
@@ -9,7 +11,8 @@ npm install
 ```
 
 ### 2- Create .env file or enviroment variable named TMDB_API_KEY
-In order to query the server is needed to have a granted api key for The Movie Database (https://developers.themoviedb.org/3/getting-started/authentication).
+In order to query the server is needed to have a [granted api key](https://developers.themoviedb.org/3/getting-started/authentication) for The Movie Database.
+
 It can be placed in a .env file in the root folder:
 ```
 TMDB_API_KEY=<<api_key>>
@@ -32,9 +35,10 @@ On the tmdb object is now possible to call the main methods of TMDB API, example
 tmdb.discover.movie(options, callback);
 tmdb.search.movie(options, callback);
 ```
-Inside each function is performed a validation on the options object, according with the documentation of TMDB reffering the constraint of the params of each route.
+Inside the object options it's possible to specify the query params of the request,in each function is performed a validation on the options object, according with the documentation of TMDB reffering the constraint of the params of each route.
 
-Example (https://developers.themoviedb.org/3/movies/get-movie-details):
+Example - [Get Movie Details](https://developers.themoviedb.org/3/movies/get-movie-details):
+
 ```
 movie_details:{
             type:"object",
@@ -52,3 +56,15 @@ movie_details:{
             }
         }
 ```
+> QuerySchemas.js
+### API endpoints and Vue SPA
+Enpoints:
+
+            /discover/movie
+            /search/movie
+            /search/tv
+            /search/person
+            /genre/movie
+            /movie/:id
+For the porpouse of the task it has been implemented an API that is used by a simple Single Page Application to show some possible usage of th TMDB API
+
