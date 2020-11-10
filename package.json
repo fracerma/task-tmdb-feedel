@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm install && cd ./client && npm install && npm run build && cd .. && node index.js",
+    "start": "npm install --silent && cd ./client && npm install --silent && npm run build --silent && cd .. && node index.js",
     "startDev": "nodemon index.js",
     "test": "jest"
   },
