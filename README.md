@@ -27,8 +27,8 @@ const tmdb = TmdbClient.init(<<TMDB api key>>);
 ```
 On the tmdb object is now possible to call the main methods of TMDB API, examples:
 ```
-tmdb.discover.movie(options, callback);
-tmdb.search.movie(options, callback);
+tmdb.discover.movie(options, callback(error,response));
+tmdb.search.movie(options, callback(error,response));
 ```
 Inside the object options it's possible to specify the query params of the request,in each function is performed a validation on the options object, according with the documentation of TMDB reffering the constraint of the params of each route.
 
@@ -61,5 +61,4 @@ Enpoints:
             /search/person
             /genre/movie
             /movie/:id
-For the porpouse of the task it has been implemented an API that is used by a simple Single Page Application to show some possible usage of th TMDB API
-
+For the porpouse of the task it has been implemented an API that is used by a simple Single Page Application to show some possible usage of the TMDB API.
