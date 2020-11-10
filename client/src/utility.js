@@ -11,7 +11,7 @@ export function fetchServer(endpoint,callback){
   );
 }
 
-const base_url="http://localhost:4000/api"
+const base_url="https://tmdb-task-feedel.herokuapp.com/api"
 
 export const endpoints={
   popular: base_url+"/discover/movie?sort_by=popularity.desc",

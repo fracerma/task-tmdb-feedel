@@ -127,19 +127,19 @@ function queryPerform(options,endpoint,callback) {
                         if (res&&res.status_code) {
                                 switch (res.status_code) {
                                         case 6: // Invalid id
-                                                callback(res, undefined);
+                                                callback(res,undefined);
                                                 break;
                                         case 7: //Invalid API key
-                                                callback(res, undefined);
+                                                callback(res,undefined);
                                                 break;
                                         case 10: //API key suspended
-                                                callback(res, undefined);
+                                                callback(res,undefined);
                                                 break;
                                         case 12: //The item/record was updated successfully
-                                                callback(res, undefined);
+                                                callback(res,undefined);
                                                 break;
                                         case 17: //Session denied
-                                                callback(res, undefined);
+                                                callback(res,undefined);
                                                 break;
                                         case 34: //Resourced not founded
                                                 callback(res,undefined);
