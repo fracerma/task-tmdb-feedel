@@ -5,12 +5,7 @@ https://tmdb-task-feedel.herokuapp.com/api      (API Base URL)
 
 # Local version
 ## Getting Started
-### 1- Project setup
-```
-npm install
-```
-
-### 2- Create .env file or enviroment variable named TMDB_API_KEY
+### 1- Create .env file or enviroment variable named TMDB_API_KEY
 In order to query the server is needed to have a [granted api key](https://developers.themoviedb.org/3/getting-started/authentication) for The Movie Database.
 
 It can be placed in a .env file in the root folder:
@@ -18,7 +13,7 @@ It can be placed in a .env file in the root folder:
 TMDB_API_KEY=<<api_key>>
 ```
 
-### 3- Start server
+### 2- Install dependecies and start the server
 ```
 npm run start
 ```
